@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Quantime</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <div id="page-content-wrapper">
+                <!-- Header-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/lessons.html">Lessons</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/puzzles.html">Puzzles</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="d-flex">
+                    <div class="border-end bg-white" id="sidebar-wrapper">
+                        <div class="sidebar-heading border-bottom bg-light">Lessons</div>
+                        <div class="list-group list-group-flush">
+                            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#learning-objectives">Learning objectives</a>
+                            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#general-introduction">General introduction to Quantum Physics</a>
+                            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#quantum-chess">Quantum Chess</a>
+                            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#zeros-and-ones">Zeros and Ones (Quantum Magic Square)</a>
+                            <a class="list-group-item list-group-item-action list-group-item-light p-5" href="#agenda">Agenda</a>
+                            <a class="list-group-item list-group-item-action list-group-item-light p-5" href="#overview">Overview</a>
+                            <a class="list-group-item list-group-item-action list-group-item-light p-5" href="#introduction">Introduction</a>
+                            <a class="list-group-item list-group-item-action list-group-item-light p-5" href="#game-play">Game play</a>
+                            <a class="list-group-item list-group-item-action list-group-item-light p-5" href="#strategy-reflection">Strategy reflection</a>
+                            <a class="list-group-item list-group-item-action list-group-item-light p-5" href="#conclusion">Conclusion</a>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <section>
+                            <h1 class="mt-4" id="lessons">Lessons</h1>
+                            <p>The following lessons include resources for instructors to introduce their students to quantum physics through game play.</p>
+                            <p>
+                                For teachers in the US, you should find that these lessons align with the
+                                <a href="https://www.nextgenscience.org/">Next Generation Science Standards</a>
+                                :
+                            </p>
+                            <ul>
+                                <li>
+                                    MS-PS4-3:
+                                    <a href="https://www.nextgenscience.org/pe/ms-ps4-3-waves-and-their-applications-technologies-information-transfer">Integrate qualitative scientific and technical information to support the claim that digitized signals are a more reliable way to encode and transmit information than analog signals.</a>
+                                </li>
+                                <li>
+                                    HS-PS4-2:
+                                    <a href="https://www.nextgenscience.org/pe/hs-ps4-2-waves-and-their-applications-technologies-information-transfer">Evaluate questions about the advantages of using digital transmission and storage of information.</a>
+                                </li>
+                                <li>
+                                    HS-PS4-5:
+                                    <a href="https://www.nextgenscience.org/pe/hs-ps4-5-waves-and-their-applications-technologies-information-transfer">Communicate technical information about how some technological devices use the principles of wave behavior and wave interactions with matter to transmit and capture information and energy.</a>
+                                </li>
+                            </ul>
+                            <p>Both lessons aim to help students build an intuition about using quantum systems to reason about the encoding and transmission of digital information.</p>
+                        </section>
+                        <section>
+                            <h1 class="mt-4" id="learning-objectives">Learning objectives</h1>
+                            <p>Students will communicate that a quantum system can express the relationships between multiple configurations of classical, single-state systems (coins are either heads or tails, physical chess pieces are either on the board or not).</p>
+                            <p>This is a feature of the real world as well, hidden from us until recently. Researchers at labs around the world are now learning how to create and wield quantum phenomena at our everyday, macroscopic scales. This work is the foundation for a new kind of super-powerful computer, quantum computers.</p>
+                        </section>
+                        <section>
+                            <h1 class="mt-4" id="general-introduction">General introduction to Quantum Physics</h1>
+                            <p>You can use this script before the first lesson</p>
+                            <ul>
+                                <li>Today we are going to explore an exciting branch of physics called Quantum physics. Quantum physics usually deals with things that are very very small, like particles and atoms. This level is called the Quantum Realm. Things are different down at that level. One amazing aspect of the Quantum Realm is that it predicts the existence of many parallel universes, where things can be very different from our universe. For example, there may be a universe in which dinosaurs still roam the Earth, or even ones in which time travel and teleportation have already been developed.</li>
+                                <li>If you’ve heard of the Marvel superhero Antman, then you’ve already been introduced to the Quantum Realm! Antman wears a special suit that makes him extremely tiny, allowing him to enter a tiny universe called the Quantum Realm.</li>
+                                <li>The idea that we may be living in just one of multiple universes - a multiverse - may sound unbelievable, like something out of science fiction. Still, it’s something that most quantum physicists believe to be true, and are currently researching. In fact, scientists at universities like Caltech and companies like Google, are looking for ways to manifest the powers of the Quantum Realm at the human scale. This would open a world of possibilities for the future of science and humanity, and we’re going to learn more about it today!</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1 class="mt-4" id="quantum-chess">Quantum Chess</h1>
+                            <p>Resources:</p>
+                            <ul>
+                                <ul>
+                                    <a href="">Guided Quantum Chess puzzles</a>
+                                </ul>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1 class="mt-4" id="zeros-and-ones">Zeros and Ones (Quantum Magic Square)</h1>
+                            <p>Zeros and Ones (a quantum Magic Square game) offers students a chance to improve their chances at winning a game by using Quantum Information Science as an analytic tool. Click on the following buttons to run the activity. For more information about the activity, continue reading below.</p>
+                            <p>Resources:</p>
+                            <ul>
+                                <li>Print game sheets</li>
+                                <li>Presentation slides</li>
+                                <li>Pre-recorded invigilator</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1 class="mt-4" id="agenda">Agenda</h1>
+                            <p>Intro: (5 mins) - See language provided on our Quantime website.</p>
+                            <p>Part I: Zeros and Ones Game (25 min) - An engaging full-class activity that builds excitement around quantum and fosters collaboration among students.</p>
+                            <p>Part II: Zeros and Ones Strategy (5-10 min) - Students explore the best classical strategy to win the game. They learn that winning the game becomes exponentially harder with each additional round.</p>
+                            <p>Part III: Quantum connection (10-15 min) - Students 1.) revisit the Zeros and Ones game through an animation that recasts the game’s strategy in a quantum light, and 2.) a video presenting some of the amazing, real world applications of quantum computers.</p>
+                        </section>
+                        <section>
+                            <h1 class="mt-4" id="overview">Overview</h1>
+                            <p>In a standard Magic Square game, a player is given 9 numbers and a 3 by 3 grid. The task is to fill in the grid with the numbers so that all rows, columns, and diagonals sum to a single number. Solutions exist to solve the Magic Square.</p>
+                            <img src="" alt="example image" />
+                            <p>In the Quantum Magic Square game, the goal is for two teams to coordinate the placement of the numbers 1 and 0 in their column and row, in a pattern so that both teams choose the same number where the one's row and the other's column intersect.</p>
+                            <img src="" alt="table: example images" />
+                            <p>The dice introduce an element of chance that makes the Zeros and Ones game unwinnable if the game is played repeatedly.</p>
+                            <p>However, if the students had access to a quantum system (like a quantum computer, or some other kind of "entangled qubit"), the quantum magic square game is winnable almost every time.</p>
+                            <p>
+                                In this game, the class divides into four teams, and plays against the instructor. A pre-recorded invigilator guides the entire class through the process. Alternatively, you can use the
+                                <a href="https://docs.google.com/presentation/d/1vXqwbjLb0dLsF5wl7CAxyaEL-o8JXF43COnfcajUk80/edit#slide=id.geff6f2c5a8_0_47">presentation slides</a>
+                                to orient the class at your own pace.
+                            </p>
+                        </section>
+                        <section>
+                            <h1 class="mt-4" id="introduction">Introduction</h1>
+                            <p>If this is their first lesson:</p>
+                            <ul>
+                                <li>“Today our goal is to understand the power of two important concepts in Quantum physics: quantum superposition and quantum entanglement. These two concepts may be responsible for everything that exists in the universe. All of matter and light, all of space and time. We’re going to start by playing a game together. It’s a fairly simple game called Zeroes and Ones. I’m going to play a video so all you need to do is follow along.”</li>
+                            </ul>
+                            <p>If they’ve already done the chess puzzles lesson:</p>
+                            <ul>
+                                <li>“In the previous lesson, you learned about quantum superposition and quantum entanglement through the game of quantum chess. Remember: quantum superposition is when something can exist in multiple places at the same time. Today we are going to continue to see the power of superposition and entanglement through another game that we’re all going to play together.”</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1 class="mt-4" id="game-play">Game play</h1>
+                            <p>Before you begin: Print at least one set of game play sheets for each team.</p>
+                            <p>The pre-recorded invigilator leads the class through the following steps:</p>
+                            <ul>
+                                <li>
+                                    <input id="cb1" type="checkbox" />
+                                    <label for="cb1">Divide students into 4 groups, based on their location in the classroom.</label>
+                                </li>
+                                <li>
+                                    <input id="cb2" type="checkbox" />
+                                    <label for="cb2">Choose a referee for each group (4 referees in total).</label>
+                                </li>
+                                <li>
+                                    <input id="cb3" type="checkbox" />
+                                    <label for="cb3">Subdivide each group into two sides: Blue and Red.</label>
+                                </li>
+                                <li>
+                                    <input id="cb4" type="checkbox" />
+                                    <label for="cb4">The pre-recorded invigilator explains the specifics of the game Zeros and Ones.</label>
+                                </li>
+                                <li>
+                                    <input id="cb5" type="checkbox" />
+                                    <label for="cb5">After a demo round, each group has 3 minutes to strategize before the first round of play. If Red and Blue try to coordinate answers during the game, the group loses that round and is eliminated.</label>
+                                </li>
+                                <li>
+                                    <input id="cb6" type="checkbox" />
+                                    <label for="cb6">If two or more groups are eliminated during play, the game ends and the teacher wins.</label>
+                                </li>
+                                <li>
+                                    <input id="cb7" type="checkbox" />
+                                    <label for="cb7">If 3 or more groups remain after 4 rounds, the teacher declares the class the winner.</label>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1 class="mt-4" id="strategy-reflection">Strategy reflection</h1>
+                            <p>Lorem ipsum</p>
+                        </section>
+                        <section>
+                            <h1 class="mt-4" id="conclusion">Conclusion</h1>
+                            <p>link to videos</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+- var page = 'puzzles'
+
+doctype html 
+html(lang='en') 
+    include head.pug
+
+    body
+        #wrapper.d-flex
+            //- include ./sidebar.pug
+            #page-content-wrapper
+                include ./navbar.pug
+                .container-sm
+                    h1 Puzzles
+                    h1.display-6.linear-wipe Welcome to the Quantum Realm
+                    p.lead The word Quantum might seem strange and scary, but it doesn't have to be. It's a label for the rules that describe all behavior in the universe, so far as humanity knows.
+                    p.lead Often, the conversation about quantum rules starts with a lot of imagination and mathematics. 
+                    p.lead <a href='about.html'>Learn more about the project</a>
+                    p.lead Today, you're going to make a new friend: Sph1r0 (pronounced s-f-ee-ro). Sph1r0 likes to talk about big ideas by using everyday objects. 
+                    p.lead(style='margin-bottom:60px;') He's going to show you a chess board. He's going to show you how the pieces on the board move. Then he's going to show you how you can think about the rules of quantum behavior as a game of chess.
+
+                .container(style='text-align:center;')
+                    iframe#puzzlesIframe(src='https://cantwellc.github.io/qute/' allowfullscreen='')
+                    #small-screen-error.lesson-script Quantum Chess puzzles require a device with Unity WebGL and a minimum width 1024x768.
+
+        include foot.pug

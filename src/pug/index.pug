@@ -1,0 +1,22 @@
+- var page = 'index'
+
+doctype html
+html(lang='en') 
+    include head.pug
+
+    body
+        #wrapper.d-flex
+            //- include ./sidebar.pug
+            #page-content-wrapper
+                include ./navbar.pug
+                .container-sm
+                    h1.display-6.linear-wipe Welcome to the Quantum Realm
+
+                    p.lead The word <i>Quantum</i> might seem strange and scary, but it doesn't have to be. It's a label for the rules that describe all behavior in the universe, so far as humanity knows.
+                    p.lead Often, the conversation about quantum rules starts with a lot of imagination and mathematics. We're taking a different approach. The resources on this site can help you build an intuition about quantum principles by using simple games and puzzles that you can practice in the real world.
+                    p.lead <a href='about.html'>Learn more about the project</a>
+                    p.lead <a href='lessons.html'>Teachers: View lesson resources</a>
+                    p.lead <a href='puzzles.html'>Students: Play Quantum Chess puzzles</a>
+
+        include foot.pug
+

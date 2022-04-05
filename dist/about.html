@@ -9,17 +9,24 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- MathJax https://www.mathjax.org/#gettingstarted-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="js/scripts.js"></script>
         <title>Quantime - About</title>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
             <div id="page-content-wrapper">
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="index.html">Quantime</a>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/sphero-mini.gif" alt="icon" />
+                        <span id="icon-bg"></span>
+                        <span>Quantime</span>
+                    </a>
                     <div class="navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mt-2 mt-lg-0">
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="lessons.html">Lessons</a></li>
                             <li class="nav-item"><a class="nav-link" href="puzzles.html">Puzzles</a></li>
                         </ul>
@@ -41,6 +48,5 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Shim for MathML-->
-        <script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
     </body>
 </html>

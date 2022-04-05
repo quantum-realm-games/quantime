@@ -3,17 +3,26 @@
  
 #wrapper {
     overflow-x: hidden;
+    background: url(../assets/stars.png) no-repeat fixed right 57px;
+    background-size: 800px;
 }
 
 $sidebarWidth: 13rem;
+$breakpoint: 992px;
 
 #sidebar-wrapper {
+    width: 0;
+    overflow: visible;
     min-height: 100vh;
+    padding-top: 24px;
     margin-left: -$sidebarWidth;
     -webkit-transition: margin .25s ease-out;
     -moz-transition: margin .25s ease-out;
     -o-transition: margin .25s ease-out;
     transition: margin .25s ease-out;
+    a:not(:active) {
+        color: black;
+    }
 }
 
 #sidebar-wrapper .sidebar-heading { 
@@ -43,7 +52,7 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $breakpoint) {
     nav {
         position: fixed !important;
     }
@@ -59,20 +68,22 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
         margin-left: -$sidebarWidth;
     }
-    #lessons-container {
+    #lessons {
         margin-left: $sidebarWidth + 2rem;
     }
 }
 
 
-$blue: #77C6FA;
+$blue: #1C7DE1;
+$darkBlue: #005DBD;
+$lightBlue: #c3d7f9;
 $purple: #6516F5;
 $pink: #EF87F9;
 
-$yellow: #FDE7E0;
-$yellow2: #F1E5D9;
+$yellow: #FEF6DC;
+$yellow2: #F3E3AD;
 // $yellow3: #F9E1C1;
-$orange: #F5C9B0;
+$orange: #DF6900;
 $red: #A72B1F;
 
 $green: #BAFD4F;
@@ -95,10 +106,37 @@ body {
     flex-direction: column;
     text-align: center;
     img {
-        margin: 20px 40px;
+        margin: 40px auto;
         // max-width: 300px;
         // max-height: 60px;
     }
+}
+
+.button-primary, .button-secondary {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin: 0 auto 20px;
+    display: inline-block;
+    transition: all .2s;
+    &:hover {
+        // filter: contrast(1.2) brightness(.9);
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.45)
+    }
+}
+.button-primary {
+    background: $blue;
+    color: white !important;
+}
+.button-secondary {
+    background: $yellow url('../assets/watercolor-texture.png');
+    background-size: cover;
+    color: black !important;
+}
+
+.display-6 {
+    margin-bottom: 40px;
 }
 
 #puzzlesIframe {
@@ -122,6 +160,19 @@ body {
     }
 }
 
+a {
+    color: $blue;
+    &:active {
+        color: $purple;
+    }
+    &:visited {
+        color: $blue;
+    }
+    &:hover {
+        color: $darkBlue;
+    }
+}
+
 .caption {
     font-size: 12px;
     color: #555;
@@ -129,45 +180,74 @@ body {
 
 h1 {
     margin-top: 140px;
-    margin-bottom: 40px
+    margin-bottom: 40px;
+    color: $blue;
 }
 
-
+btn-primary {
+    background: $blue;
+}
 nav {
-    background: $yellow;
-    background: linear-gradient(to right, $yellow 0%, $yellow2 100%); 
+    background: $yellow url('../assets/watercolor-texture.png');
+    background-size: cover;
     padding: .5rem 1rem;
     z-index: 1; // above sidebar
     width: 100%;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 .navbar-brand {
-    // color: $blue
+    color: black !important;
     text-transform: uppercase;
     margin-right: 80px;
     font-weight: bold;
-    color: black;
-    font-family: Roboto;
+    position: relative;
+    a {
+        color: black;
+    }
+    img {
+        display: inline;
+        mix-blend-mode: darken;
+        margin: -8px 6px -5px -2px;
+        animation: rotate 20s infinite; 
+        position: relative;
+        z-index: 1; // above #icon-bg
+    }
+    #icon-bg { // pupil of Sphero's eye
+        background: white;
+        border-radius: 100%;
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+    }
+}
+@keyframes rotate {
+    50% {
+        transform: rotateZ(45deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
 }
 
 .nav-item {
     margin-right: 20px
 }
-.nav-item.active {
-    color: $pink
-}
-.nav-item.active {
-    color: $pink
+.nav-item.active a {
+    color: black;
+    font-weight: 600;
 }
 
 // LESSONS
 section {
     padding-top: 80px;
 }
-.level-1 {
+.header-2 {
     font-size: 14px;
     font-weight: bold;
 }
-.level-2 {
+.header-3 {
     font-size: 12px;
     padding-left: 30px;
 }
@@ -185,6 +265,10 @@ ul.checklist {
     border: none;
     background: none;
 }
+.list-group-item.active {
+    background: $lightBlue;
+    border-radius: 0 99px 99px 0;
+}
 
 
 
@@ -198,7 +282,7 @@ ul.checklist {
 // Another option: https://www.gradient-animator.com/
 // Another option: https://cssgradient.io/
 @mixin linear-wipe {
-    background: linear-gradient(to right, $purple 25%, $pink 50%, $pink 75% , $purple 100%);
+    background: linear-gradient(to right, $blue 25%, $darkBlue 75%);
     background-size: 200% auto;
     
     color: #000;
@@ -226,11 +310,12 @@ ul.checklist {
 
 div.lesson-script {
     // border: 1px solid #ddd;
+    background: white;
     border-radius: 3px;
     padding: 20px;
     font-size: 14px;
     box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.12);
-    p:last-child {
+    *:last-child {
         margin-bottom: 0;
     }
     margin-bottom: 20px;
@@ -240,12 +325,12 @@ h3 {
     font-size: 20px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: $breakpoint) {
     #agenda-list {
         display: none;
     }
 }
-@media (max-width: 499px) {
+@media (max-width: calc($breakpoint - 1px)) {
     #agenda-table {
         display: none;
     }
@@ -261,10 +346,29 @@ h3 {
     text-align: center;
 }
 
+#strategy-table-wrapper {
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
 img {
-    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto 0 auto;
 }
 h5 {
     margin-top: 40px;
     font-size: 1.1rem;
+}
+
+.mathjax {
+    text-align: center;
+    margin-bottom: 20px;
+}
+mjx-container.MathJax[jax="CHTML"][display="true"] {
+    display: inline;
+}
+
+#probability {
+    width: 100%; //443px;
+    max-width: 600px;
 }

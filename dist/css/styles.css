@@ -11288,12 +11288,20 @@ textarea.form-control-lg {
 }
 #wrapper {
   overflow-x: hidden;
+  background: url(../assets/stars.png) no-repeat fixed right 57px;
+  background-size: 800px;
 }
 
 #sidebar-wrapper {
+  width: 0;
+  overflow: visible;
   min-height: 100vh;
+  padding-top: 24px;
   margin-left: -13rem;
   transition: margin 0.25s ease-out;
+}
+#sidebar-wrapper a:not(:active) {
+  color: black;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -11338,7 +11346,7 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -13rem;
   }
 
-  #lessons-container {
+  #lessons {
     margin-left: 15rem;
   }
 }
@@ -11356,7 +11364,35 @@ body {
   text-align: center;
 }
 #logos img {
-  margin: 20px 40px;
+  margin: 40px auto;
+}
+
+.button-primary, .button-secondary {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 0 auto 20px;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.button-primary:hover, .button-secondary:hover {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+}
+
+.button-primary {
+  background: #1C7DE1;
+  color: white !important;
+}
+
+.button-secondary {
+  background: #FEF6DC url("../assets/watercolor-texture.png");
+  background-size: cover;
+  color: black !important;
+}
+
+.display-6 {
+  margin-bottom: 40px;
 }
 
 #puzzlesIframe {
@@ -11380,6 +11416,19 @@ body {
     display: block;
   }
 }
+a {
+  color: #1C7DE1;
+}
+a:active {
+  color: #6516F5;
+}
+a:visited {
+  color: #1C7DE1;
+}
+a:hover {
+  color: #005DBD;
+}
+
 .caption {
   font-size: 12px;
   color: #555;
@@ -11388,46 +11437,87 @@ body {
 h1, .h1 {
   margin-top: 140px;
   margin-bottom: 40px;
+  color: #1C7DE1;
+}
+
+btn-primary {
+  background: #1C7DE1;
 }
 
 nav {
-  background: #FDE7E0;
-  background: linear-gradient(to right, #FDE7E0 0%, #F1E5D9 100%);
+  background: #FEF6DC url("../assets/watercolor-texture.png");
+  background-size: cover;
   padding: 0.5rem 1rem;
   z-index: 1;
   width: 100%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 .navbar-brand {
+  color: black !important;
   text-transform: uppercase;
   margin-right: 80px;
   font-weight: bold;
+  position: relative;
+}
+.navbar-brand a {
   color: black;
-  font-family: Roboto;
+}
+.navbar-brand img {
+  display: inline;
+  mix-blend-mode: darken;
+  margin: -8px 6px -5px -2px;
+  -webkit-animation: rotate 20s infinite;
+          animation: rotate 20s infinite;
+  position: relative;
+  z-index: 1;
+}
+.navbar-brand #icon-bg {
+  background: white;
+  border-radius: 100%;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
 }
 
+@-webkit-keyframes rotate {
+  50% {
+    transform: rotateZ(45deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotateZ(45deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
 .nav-item {
   margin-right: 20px;
 }
 
-.nav-item.active {
-  color: #EF87F9;
-}
-
-.nav-item.active {
-  color: #EF87F9;
+.nav-item.active a {
+  color: black;
+  font-weight: 600;
 }
 
 section {
   padding-top: 80px;
 }
 
-.level-1 {
+.header-2 {
   font-size: 14px;
   font-weight: bold;
 }
 
-.level-2 {
+.header-3 {
   font-size: 12px;
   padding-left: 30px;
 }
@@ -11448,8 +11538,13 @@ ul.checklist label {
   background: none;
 }
 
+.list-group-item.active {
+  background: #c3d7f9;
+  border-radius: 0 99px 99px 0;
+}
+
 .linear-wipe {
-  background: linear-gradient(to right, #6516F5 25%, #EF87F9 50%, #EF87F9 75%, #6516F5 100%);
+  background: linear-gradient(to right, #1C7DE1 25%, #005DBD 75%);
   background-size: 200% auto;
   color: #000;
   background-clip: text;
@@ -11471,19 +11566,20 @@ ul.checklist label {
 }
 
 .gradient {
-  background: linear-gradient(to right, #6516F5 0%, #77C6FA 100%);
+  background: linear-gradient(to right, #6516F5 0%, #1C7DE1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 div.lesson-script {
+  background: white;
   border-radius: 3px;
   padding: 20px;
   font-size: 14px;
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.12);
   margin-bottom: 20px;
 }
-div.lesson-script p:last-child {
+div.lesson-script *:last-child {
   margin-bottom: 0;
 }
 
@@ -11491,12 +11587,12 @@ h3, .h3 {
   font-size: 20px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 992px) {
   #agenda-list {
     display: none;
   }
 }
-@media (max-width: 499px) {
+@media (max-width: 991px) {
   #agenda-table {
     display: none;
   }
@@ -11513,11 +11609,31 @@ h3, .h3 {
   text-align: center;
 }
 
+#strategy-table-wrapper {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
 img {
-  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto 0 auto;
 }
 
 h5, .h5 {
   margin-top: 40px;
   font-size: 1.1rem;
+}
+
+.mathjax {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+mjx-container.MathJax[jax=CHTML][display=true] {
+  display: inline;
+}
+
+#probability {
+  width: 100%;
+  max-width: 600px;
 }

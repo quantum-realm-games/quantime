@@ -9,46 +9,51 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- MathJax https://www.mathjax.org/#gettingstarted-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="js/scripts.js"></script>
         <title>Quantime - Lessons</title>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
             <div id="page-content-wrapper">
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="index.html">Quantime</a>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/sphero-mini.gif" alt="icon" />
+                        <span id="icon-bg"></span>
+                        <span>Quantime</span>
+                    </a>
                     <div class="navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mt-2 mt-lg-0">
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                             <li class="nav-item active"><a class="nav-link" href="lessons.html">Lessons</a></li>
                             <li class="nav-item"><a class="nav-link" href="puzzles.html">Puzzles</a></li>
                         </ul>
                     </div>
                 </nav>
-                <div class="d-flex">
+                <div class="d-flex" id="lessons-body">
                     <div class="border-end bg-white" id="sidebar-wrapper">
                         <div class="list-group list-group-flush">
-                            <a class="list-group-item level-1" href="#lessons">Lessons</a>
-                            <a class="list-group-item level-2" href="#lessons_quantum-chess">Quantum Chess</a>
-                            <a class="list-group-item level-2" href="#lessons_zeros-and-ones">Zeros and Ones</a>
-                            <a class="list-group-item level-2" href="#learning-objectives">Learning objectives</a>
-                            <a class="list-group-item level-2" href="#standards-alignment">Standards alignment</a>
-                            <a class="list-group-item level-2" href="#general-introduction">General introduction to Quantum Physics</a>
-                            <a class="list-group-item level-1" href="#quantum-chess">Lesson: Quantum Chess</a>
-                            <a class="list-group-item level-1" href="#zeros-and-ones">Lesson: Zeros and Ones (Quantum Magic Square)</a>
-                            <a class="list-group-item level-2" href="#agenda">Agenda</a>
-                            <a class="list-group-item level-2" href="#overview">Overview</a>
-                            <a class="list-group-item level-2" href="#introduction">Introduction</a>
-                            <a class="list-group-item level-2" href="#game-play">Game play</a>
-                            <a class="list-group-item level-2" href="#strategy-reflection">Strategy reflection</a>
-                            <a class="list-group-item level-2" href="#conclusion">Conclusion</a>
+                            <a class="list-group-item header-2" href="#lessons">Lessons</a>
+                            <a class="list-group-item header-3" href="#lessons_quantum-chess">Quantum Chess</a>
+                            <a class="list-group-item header-3" href="#lessons_zeros-and-ones">Zeros and Ones</a>
+                            <a class="list-group-item header-3" href="#learning-objectives">Learning objectives</a>
+                            <a class="list-group-item header-3" href="#standards-alignment">Standards alignment</a>
+                            <a class="list-group-item header-3" href="#general-introduction">General introduction to Quantum Physics</a>
+                            <a class="list-group-item header-2" href="#quantum-chess">Lesson: Quantum Chess</a>
+                            <a class="list-group-item header-2" href="#zeros-and-ones">Lesson: Zeros and Ones (Quantum Magic Square)</a>
+                            <a class="list-group-item header-3" href="#agenda">Agenda</a>
+                            <a class="list-group-item header-3" href="#overview">Overview</a>
+                            <a class="list-group-item header-3" href="#introduction">Introduction</a>
+                            <a class="list-group-item header-3" href="#game-play">Game play</a>
+                            <a class="list-group-item header-3" href="#strategy-reflection">Strategy reflection</a>
+                            <a class="list-group-item header-3" href="#conclusion">Conclusion</a>
                         </div>
                     </div>
-                    <div class="container-sm" id="lessons-container">
-                        <section id="lessons">
-                            <h1>Lessons</h1>
-                            <p class="lead">The following lessons include resources for instructors from all backgrounds to introduce their students to quantum physics through game play. The activities are independent, so you can use either activity, or both, in any order. We recommend that you start with the Quantum Chess puzzles.</p>
-                        </section>
+                    <div class="container-sm" id="lessons">
+                        <h1>Lessons</h1>
+                        <p class="lead">The following lessons include resources for instructors from all backgrounds to introduce their students to quantum physics through game play. The activities are independent, so you can use either activity, or both, in any order. We recommend that you start with the Quantum Chess puzzles.</p>
                         <section id="lessons_quantum-chess">
                             <h3>Quantum Chess</h3>
                             <div class="caption">This activity requires no prior knowledge of chess.</div>
@@ -86,20 +91,22 @@
                                 <a href="https://www.nextgenscience.org/" target="_blank">Next Generation Science Standards</a>
                                 :
                             </p>
-                            <ul>
-                                <li>
-                                    MS-PS4-3:
-                                    <a href="https://www.nextgenscience.org/pe/ms-ps4-3-waves-and-their-applications-technologies-information-transfer" target="_blank">Integrate qualitative scientific and technical information to support the claim that digitized signals are a more reliable way to encode and transmit information than analog signals.</a>
-                                </li>
-                                <li>
-                                    HS-PS4-2:
-                                    <a href="https://www.nextgenscience.org/pe/hs-ps4-2-waves-and-their-applications-technologies-information-transfer" target="_blank">Evaluate questions about the advantages of using digital transmission and storage of information.</a>
-                                </li>
-                                <li>
-                                    HS-PS4-5:
-                                    <a href="https://www.nextgenscience.org/pe/hs-ps4-5-waves-and-their-applications-technologies-information-transfer" target="_blank">Communicate technical information about how some technological devices use the principles of wave behavior and wave interactions with matter to transmit and capture information and energy.</a>
-                                </li>
-                            </ul>
+                            <div class="lesson-script">
+                                <ul>
+                                    <li>
+                                        MS-PS4-3:
+                                        <a href="https://www.nextgenscience.org/pe/ms-ps4-3-waves-and-their-applications-technologies-information-transfer" target="_blank">Integrate qualitative scientific and technical information to support the claim that digitized signals are a more reliable way to encode and transmit information than analog signals.</a>
+                                    </li>
+                                    <li>
+                                        HS-PS4-2:
+                                        <a href="https://www.nextgenscience.org/pe/hs-ps4-2-waves-and-their-applications-technologies-information-transfer" target="_blank">Evaluate questions about the advantages of using digital transmission and storage of information.</a>
+                                    </li>
+                                    <li>
+                                        HS-PS4-5:
+                                        <a href="https://www.nextgenscience.org/pe/hs-ps4-5-waves-and-their-applications-technologies-information-transfer" target="_blank">Communicate technical information about how some technological devices use the principles of wave behavior and wave interactions with matter to transmit and capture information and energy.</a>
+                                    </li>
+                                </ul>
+                            </div>
                             <p>Both lessons aim to help students build an intuition about using quantum systems to reason about the encoding and transmission of digital information.</p>
                         </section>
                         <section id="general-introduction">
@@ -118,7 +125,13 @@
                             <ul>
                                 <li><a href="puzzles.html">Go to the guided Quantum Chess puzzles</a></li>
                                 <li><a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit?usp=sharing" target="_quantumChessSlides">Present the slides</a></li>
-                                <li><a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit#slide=id.g122f15d85e6_2_11" target="_quantumChessSlides">Choose a conclusion</a></li>
+                                <li>
+                                    Choose a
+                                    <a href="#conclusion">conclusion</a>
+                                    (info below,
+                                    <a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit#slide=id.g122f15d85e6_2_11" target="_quantumChessSlides">slides</a>
+                                    ).
+                                </li>
                             </ul>
                             <p>You can use the following script to introduce your class to Quantum Chess puzzles. The in-puzzle character will do the rest.</p>
                             <div class="lesson-script">
@@ -149,16 +162,17 @@
                                     <a href="https://drive.google.com/file/d/19n8KYIzd4Hq--w6duAGOPM42veEJSx5Y/view" target="_blank">game sheets.</a>
                                 </li>
                                 <li>
-                                    Play the
-                                    <a href="https://www.youtube.com/watch?v=BbAdh5QR5Dk" target="_blank">pre-recorded facilitator.</a>
-                                </li>
-                                <li>
                                     Project the
                                     <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.p" target="_zerosAndOnesSlides">presentation slides.</a>
                                 </li>
                                 <li>
+                                    Play the
+                                    <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_169" target="_onesAndZerosSlides">pre-recorded facilitator (slide 3).</a>
+                                </li>
+                                <li>
                                     Choose a
-                                    <a href="#conclusion">conclusion.</a>
+                                    <a href="#conclusion">conclusion</a>
+                                    (below).
                                 </li>
                             </ul>
                         </section>
@@ -221,44 +235,46 @@
                         <section id="overview">
                             <h3>Overview for the instructor</h3>
                             <p>In a standard Magic Square game, a player is given 9 numbers and a 3 by 3 grid. The task is to fill in the grid with the numbers so that all rows, columns, and diagonals sum to a single number. Solutions exist to solve the Magic Square.</p>
-                            <img src="assets/lessons/classical-magic-square.jpg" alt="9 numbers and a 3 by 3 grid" />
+                            <img src="assets/lessons/classical-magic-square.svg" alt="9 numbers and a 3 by 3 grid" />
                             <p>In the Quantum Magic Square game, the goal is for two groups to coordinate the placement of the numbers 1 and 0 in their column and row, in a pattern so that both groups choose the same number where the one's row and the other's column intersect.</p>
                             <p>The Blue group must populate the rows of the grid with an even number of ones. The Red group must populate the columns with an odd number of Zeros.</p>
-                            <table class="table" id="ones-and-zeros-overview-table">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <img src="assets/lessons/row-strategy.jpg" alt="Row strategy" />
-                                            <div class="caption">Three rows that meet the requirements for Zeros and Ones: 011, 110, 101.</div>
-                                        </td>
-                                        <td>
-                                            <img src="assets/lessons/column-strategy.jpg" alt="Column strategy" />
-                                            <div class="caption">Three columns that meet the requirements for Zeros and Ones: 010, 100, 111.</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            <img src="assets/lessons/dice-white.png" alt="Dice" />
-                                            <div class="caption">A pair of dice showing 6 on top. The front faces show 4 and 5.</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src="assets/lessons/winning-condition.jpg" alt="Winning condition: row 2, column 1" />
-                                            <div class="caption">A winning play for the team, where the second row and first column were assigned. The Blue group chose 110, and the Red group chose 010. The row and column both have the number 1 at the intersection</div>
-                                        </td>
-                                        <td>
-                                            <img src="assets/lessons/losing-condition.jpg" alt="Losing condition row 2, column 2" />
-                                            <div class="caption">A losing play for the team, where the second row and second column were assigned. The Blue group chose 110 and the Red group chose 100. The row and column have different numbers at the intersection..</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div id="strategy-table-wrapper">
+                                <table class="table" id="ones-and-zeros-overview-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="assets/lessons/row-strategy.svg" alt="Row strategy" />
+                                                <div class="caption">Three rows that meet the requirements for Zeros and Ones: 011, 110, 101.</div>
+                                            </td>
+                                            <td>
+                                                <img src="assets/lessons/column-strategy.svg" alt="Column strategy" />
+                                                <div class="caption">Three columns that meet the requirements for Zeros and Ones: 010, 100, 111.</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <img src="assets/lessons/dice.png" alt="Dice" />
+                                                <div class="caption">A pair of rolling dice</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="assets/lessons/winning-condition.svg" alt="Winning condition: row 2, column 1" />
+                                                <div class="caption">A winning play for the team, where the second row and first column were assigned. The Blue group chose 110, and the Red group chose 010. The row and column both have the number 1 at the intersection</div>
+                                            </td>
+                                            <td>
+                                                <img src="assets/lessons/losing-condition.svg" alt="Losing condition row 2, column 2" />
+                                                <div class="caption">A losing play for the team, where the second row and second column were assigned. The Blue group chose 110 and the Red group chose 100. The row and column have different numbers at the intersection.</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             <p>The dice introduce an element of chance that makes the Zeros and Ones game unwinnable if the game is played repeatedly.</p>
                             <p>However, if the students had access to a quantum system (like a quantum computer, or some other kind of "entangled qubit"), the quantum magic square game is winnable every time.</p>
                             <p>
                                 In this game, the class divides into four teams, each with two groups. A
-                                <a href="https://www.youtube.com/watch?v=BbAdh5QR5Dk" target="_blank">pre-recorded facilitator</a>
+                                <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_169" target="_onesAndZerosSlides">pre-recorded facilitator</a>
                                 guides the entire class through the process.
                             </p>
                         </section>
@@ -294,7 +310,7 @@
                             </p>
                             <p>
                                 The
-                                <a href="https://www.youtube.com/watch?v=BbAdh5QR5Dk" target="_blank">pre-recorded facilitator</a>
+                                <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_169" target="_onesAndZerosSlides">pre-recorded facilitator</a>
                                 leads the class through the following steps:
                             </p>
                             <ul class="checklist">
@@ -314,7 +330,7 @@
                                     <input id="cb4" type="checkbox" />
                                     <label for="cb4">
                                         The
-                                        <a href="https://www.youtube.com/watch?v=BbAdh5QR5Dk" target="_blank">pre-recorded facilitator</a>
+                                        <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_169" target="_onesAndZerosSlides">pre-recorded facilitator</a>
                                         explains the specifics of the game Zeros and Ones.
                                     </label>
                                 </li>
@@ -336,7 +352,7 @@
                             <h3>Strategy reflection</h3>
                             <p>Jump to the:</p>
                             <ul>
-                                <li><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g120e4b95302_0_91" target="_zerosAndOnesSlides">Strategy Discussion slides</a></li>
+                                <li><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_173" target="_zerosAndOnesSlides">Strategy Discussion slides</a></li>
                                 <li>
                                     <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g120e4b95302_0_110" target="_zerosAndOnesSlides">Quantum Strategy slides</a>
                                     or
@@ -344,26 +360,25 @@
                                 </li>
                             </ul>
                             <p>To win the game, every row needs an even number of 1s and every column needs an odd number of 1s. However, there's always one square that can't be filled in without breaking the rules. This means that there is only an 8/9 chance of winning any given round, or about 89%.</p>
-                            <img alt="Ideal strategy" src="assets/lessons/ideal-strategy.jpg" style="width: 260px" />
+                            <img alt="Ideal strategy" src="assets/lessons/ideal-strategy.svg" style="width: 260px" />
                             <p>We can write the probability for any one team winning four rounds in a row:</p>
-                            <img alt="Equation" src="assets/lessons/strategy-reflection-figure-1.png" style="width: 281px" alt="p equals left parenthesis 8 divided by 9 right parenthesis to the power of 4 almost equal to 62 percent sign" />
+                            <div class="mathjax">$$p = \left( \frac{8}{9} \right)^4 \approx 62.43\%$$</div>
                             <p>Or, more generally, for winning n games in a row:</p>
-                            <img alt="Equation" src="assets/lessons/strategy-reflection-figure-2.png" style="width: 137px" alt="p equals left parenthesis 8 divided by 9 right parenthesis to the power of n" />
+                            <div class="mathjax">$$p = \left( \frac{8}{9} \right)^n$$</div>
                             <p>Now we can write the probability of at least three groups winning all four rounds:</p>
-                            <img alt="Equation" src="assets/lessons/strategy-reflection-figure-3.png" style="width: 443px" alt="p to the power of 4 plus 4 left parenthesis 1 minus p right parenthesis p cubed space equals p to the power of 4 plus 4 p cubed minus 4 p to the power of 4 space equals 4 p cubed minus 3 p to the power of 4" />
-                            <p>
-                                Earlier, we calculated that the probability of winning all four rounds was
-                                <img src="assets/lessons/894.png" alt="left parenthesis 8 divided by 9 right parenthesis to the power of 4" style="width: 34px" />
-                                , so substituting that into our equation:
-                            </p>
-                            <img alt="Equation" src="assets/lessons/strategy-reflection-figure-4.png" style="width: 251px" alt="4 left parenthesis 8 divided by 9 right parenthesis to the power of 12 minus 3 left parenthesis 8 divided by 9 right parenthesis to the power of 16 approximately equal to 51.8 percent sign" />
+                            <img id="probability" alt="Equation" src="assets/lessons/probability.svg" alt="p to the power of 4 plus 4 left parenthesis 1 minus p right parenthesis p cubed space equals p to the power of 4 plus 4 p cubed minus 4 p to the power of 4 space equals 4 p cubed minus 3 p to the power of 4" />
+                            <p>Earlier, we calculated that the probability of winning all four rounds was $$\left( \frac{8}{9} \right)^4$$, so substituting that into our equation:</p>
+                            <div class="mathjax">$$4 \left( \frac{8}{9} \right)^{4 \times 3} - 3 \left( \frac{8}{9} \right)^{4 \times 4}$$</div>
+                            <div class="mathjax">$$\approx 51.76\%$$</div>
                             <p>As we build machines that enable us to engage with the quantum realm, like quantum computers, we can play this game in a way where we win 100% of the time. For this game, we need a device with six qubits that we can entangle.</p>
-                            <p>The following video describes how we can use these qubits to win the game.</p>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/rr9PW_yemYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>
+                                <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_220" target="onesAndZerosSlides">This video</a>
+                                following video describes how we can use these qubits to win the game.
+                            </p>
                         </section>
                         <section id="conclusion">
                             <h3>Conclusion</h3>
-                            <p>Below are some suggested resources that you can use to close your lesson</p>
+                            <p>Below are some suggested resources that you can use to close your lesson:</p>
                             <h5><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/present?slide=id.g120e4b95302_0_114" target="_zerosAndOnesSlides">Practical applications</a></h5>
                             <p>This outro is about connecting the quantum concepts the students learned about to the real world. Before leading this workshop, feel free to watch all of the videos and decide which would be most appropriate for your class, or ask the class to choose! We love them all so we couldn’t choose just one!</p>
                             <div class="lesson-script">"Today, we’ve been introduced to quantum superposition and how we can leverage it to win games, but quantum computing isn’t all about winning games. We’re going to wrap up today by watching a video that will help us understand how we can use quantum computing to solve some of the big challenges in the world."</div>
@@ -387,6 +402,19 @@
                             <p>There is so much more to learn about this topic that we weren’t able to cover in this lesson. The study of quantum physics is vast and ever-growing, and if you’d like to continue your journey with it, there are many ways:</p>
                             <ul>
                                 <li>
+                                    Explore the
+                                    <a href="https://quantumchess.net/playground" target="_blank">Quantum Chess playground</a>
+                                </li>
+                                <li>
+                                    Learn More about Quantum Science:
+                                    <ul>
+                                        <li><a href="https://scienceexchange.caltech.edu/topics/quantum-science-explained" target="_blank">Caltech Quantum Physics explainers</a></li>
+                                        <li><a href="https://q12education.org/quantime" target="_blank">Other Quantime activities at the Q12 Partnership</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
                                     Play more quantum chess (either
                                     <a href="https://quantumchess.net/" target="_blank">website</a>
                                     or give access to quantum realm version)
@@ -397,22 +425,6 @@
                                     , you can find more resources to learn about quantum science.
                                 </li>
                             </ul>
-                            <p>Share the following resources with your students. If there is remaining time, students can explore these links during the remainder of the class. Otherwise, they can view them on their own time:</p>
-                            <ul>
-                                <li>
-                                    Play Quantum Chess
-                                    <ul>
-                                        <li><a href="https://quantumchess.net/playground" target="_blank">https://quantumchess.net/playground</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Learn More about Quantum Science
-                                    <ul>
-                                        <li><a href="https://scienceexchange.caltech.edu/topics/quantum-science-explained" target="_blank">https://scienceexchange.caltech.edu/topics/quantum-science-explained</a></li>
-                                        <li><a href="https://q12education.org/quantime" target="_blank">https://q12education.org/quantime</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
                         </section>
                     </div>
                 </div>
@@ -421,6 +433,5 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Shim for MathML-->
-        <script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
     </body>
 </html>

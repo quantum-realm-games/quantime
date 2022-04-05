@@ -9,17 +9,24 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- MathJax https://www.mathjax.org/#gettingstarted-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="js/scripts.js"></script>
         <title>Quantime</title>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
             <div id="page-content-wrapper">
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="index.html">Quantime</a>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/sphero-mini.gif" alt="icon" />
+                        <span id="icon-bg"></span>
+                        <span>Quantime</span>
+                    </a>
                     <div class="navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mt-2 mt-lg-0">
                             <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="lessons.html">Lessons</a></li>
                             <li class="nav-item"><a class="nav-link" href="puzzles.html">Puzzles</a></li>
                         </ul>
@@ -33,15 +40,24 @@
                         might seem strange and scary, but it doesn't have to be. It's a label for the rules that describe all behavior in the universe, so far as humanity knows.
                     </p>
                     <p class="lead">Often, the conversation about quantum rules starts with a lot of imagination and mathematics. We're taking a different approach. The resources on this site can help you build an intuition about quantum principles by using simple games and puzzles that you can practice in the real world.</p>
-                    <p class="lead"><a href="about.html">Learn more about the project</a></p>
-                    <p class="lead"><a href="lessons.html">Teachers: View lesson resources</a></p>
-                    <p class="lead"><a href="puzzles.html">Students: Play Quantum Chess puzzles</a></p>
+                    <a class="lead button-secondary" href="lessons.html">View lessons</a>
+                    <br />
+                    <a class="lead button-primary" href="puzzles.html">Play Quantum Chess puzzles</a>
+                </div>
+                <div class="container-sm" style="margin-top: 192px">
+                    <p class="lead">The resources on this site are produced in a collaboration between the following organizations:</p>
+                    <div id="logos">
+                        <a href="https://quantumchess.net/" target="_blank" alt="Quantum Realm Games"><img src="assets/logos/quantum-realm-games.png" alt="Quantum Realm Games logo" style="width: 360px" /></a>
+                        <a href="https://iqim.caltech.edu/" target="_blank" alt="CalTech, Institute for Quantum Information and Matter"><img src="assets/logos/iqim.png" alt="IQIM logo" style="width: 200px" /></a>
+                        <a href="https://quantumai.google/" target="_blank" alt="Google"><img src="assets/logos/google-quantum-ai.png" alt="Google Quantum AI logo" style="width: 200px" /></a>
+                        <a href="http://www.wiu.edu/physics" target="_blank" alt="Western Illinois University, Department of Physics"><img src="assets/logos/western-illinois-university.png" alt="Western Illinois University logo" style="width: 280px" /></a>
+                        <a href="https://arcanforge.com/" target="_blank" alt="Arcanforge"><img src="assets/logos/arcanforge.png" alt="Arcanforge logo" style="width: 240px" /></a>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Shim for MathML-->
-        <script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
     </body>
 </html>

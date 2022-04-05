@@ -101,7 +101,7 @@ hr:not([size]) {
   height: 1px;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .header-3, h2, .header-2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -117,20 +117,20 @@ h1, .h1 {
   }
 }
 
-h2, .h2 {
+h2, .header-2 {
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
-  h2, .h2 {
+  h2, .header-2 {
     font-size: 2rem;
   }
 }
 
-h3, .h3 {
+h3, .header-3 {
   font-size: calc(1.3rem + 0.6vw);
 }
 @media (min-width: 1200px) {
-  h3, .h3 {
+  h3, .header-3 {
     font-size: 1.75rem;
   }
 }

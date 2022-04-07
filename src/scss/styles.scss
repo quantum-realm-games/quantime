@@ -101,7 +101,7 @@ body {
     max-width: 640px;
 }
 
-#logos {
+.logos {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -334,7 +334,7 @@ h3 {
     #agenda-table {
         display: none;
     }
-    #logos {
+    .logos {
         zoom: 70%;
     }
 }

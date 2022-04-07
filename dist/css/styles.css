@@ -11358,12 +11358,12 @@ body {
   max-width: 640px;
 }
 
-#logos {
+.logos {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-#logos img {
+.logos img {
   margin: 40px auto;
 }
 
@@ -11597,7 +11597,7 @@ h3, .h3 {
     display: none;
   }
 
-  #logos {
+  .logos {
     zoom: 70%;
   }
 }

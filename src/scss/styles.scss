@@ -68,8 +68,13 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
         margin-left: -$sidebarWidth;
     }
-    #lessons {
+    .container-sm {
+        // max-width: 960px;
+        max-width: 640px;
         margin-left: $sidebarWidth + 2rem;
+        #lessons-container {
+            border: 1px solid red !important; // margin-left: $sidebarWidth + 2rem;
+        }
     }
 }
 
@@ -96,10 +101,7 @@ body {
     // background-size: 60px;
 }
 
-.container-sm {
-    // max-width: 960px;
-    max-width: 640px;
-}
+
 
 .logos {
     display: flex;
@@ -133,10 +135,6 @@ body {
     background: $yellow url('../assets/watercolor-texture.png');
     background-size: cover;
     color: black !important;
-}
-
-.display-6 {
-    margin-bottom: 40px;
 }
 
 #puzzlesIframe {
@@ -178,10 +176,25 @@ a {
     color: #555;
 }
 
-h1 {
-    margin-top: 140px;
-    margin-bottom: 40px;
+h1, .display-6 {
+    padding-top: 140px; // uses padding instead of margin, for anchor alignment
+    padding-bottom: 40px;
     color: $blue;
+}
+h2 {
+    padding-top: 140px;
+}
+h3 {
+    padding-top: 90px;
+    font-size: 24px;
+}
+h4 {
+    padding-top: 45px;
+    font-size: 16px;
+}
+h5 {
+    margin-top: 40px;
+    font-size: 1.1rem;
 }
 
 btn-primary {
@@ -241,7 +254,7 @@ nav {
 
 // LESSONS
 section {
-    padding-top: 80px;
+    // padding-top: 80px;
 }
 .header-2 {
     font-size: 14px;
@@ -314,16 +327,13 @@ div.lesson-script {
     border-radius: 3px;
     padding: 20px;
     font-size: 14px;
-    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.12);
+    box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.16);
     *:last-child {
         margin-bottom: 0;
     }
     margin-bottom: 20px;
 }
 
-h3 {
-    font-size: 20px;
-}
 
 @media (min-width: $breakpoint) {
     #agenda-list {
@@ -355,10 +365,6 @@ img {
     display: block;
     margin: 0 auto 0 auto;
 }
-h5 {
-    margin-top: 40px;
-    font-size: 1.1rem;
-}
 
 .mathjax {
     text-align: center;
@@ -371,4 +377,28 @@ mjx-container.MathJax[jax="CHTML"][display="true"] {
 #probability {
     width: 100%; //443px;
     max-width: 600px;
+}
+
+.todo-box {
+    border: 1px dotted red;
+}
+.todo {
+    color: red;
+}
+
+.lesson-cover {
+    background: $yellow; 
+    // background: white;
+    display: flex;
+    align-items: center; // vertical
+    width: 100%; //mobile
+    padding: 20px;
+    height: 300px;
+    border-radius: 3px;
+    font-size: 14px;
+    box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.16);
+    margin: 40px 0;
+    img {
+        width: 70%;
+    }
 }

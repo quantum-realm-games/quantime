@@ -11346,16 +11346,16 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -13rem;
   }
 
-  #lessons {
+  .container-sm {
+    max-width: 640px;
     margin-left: 15rem;
+  }
+  .container-sm #lessons-container {
+    border: 1px solid red !important;
   }
 }
 body {
   background: white;
-}
-
-.container-sm {
-  max-width: 640px;
 }
 
 .logos {
@@ -11389,10 +11389,6 @@ body {
   background: #FEF6DC url("../assets/watercolor-texture.png");
   background-size: cover;
   color: black !important;
-}
-
-.display-6 {
-  margin-bottom: 40px;
 }
 
 #puzzlesIframe {
@@ -11434,10 +11430,29 @@ a:hover {
   color: #555;
 }
 
-h1, .h1 {
-  margin-top: 140px;
-  margin-bottom: 40px;
+h1, .h1, .display-6 {
+  padding-top: 140px;
+  padding-bottom: 40px;
   color: #1C7DE1;
+}
+
+h2, .h2 {
+  padding-top: 140px;
+}
+
+h3, .h3 {
+  padding-top: 90px;
+  font-size: 24px;
+}
+
+h4, .h4 {
+  padding-top: 45px;
+  font-size: 16px;
+}
+
+h5, .h5 {
+  margin-top: 40px;
+  font-size: 1.1rem;
 }
 
 btn-primary {
@@ -11508,10 +11523,6 @@ nav {
   font-weight: 600;
 }
 
-section {
-  padding-top: 80px;
-}
-
 .header-2 {
   font-size: 14px;
   font-weight: bold;
@@ -11576,15 +11587,11 @@ div.lesson-script {
   border-radius: 3px;
   padding: 20px;
   font-size: 14px;
-  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.16);
   margin-bottom: 20px;
 }
 div.lesson-script *:last-child {
   margin-bottom: 0;
-}
-
-h3, .h3 {
-  font-size: 20px;
 }
 
 @media (min-width: 992px) {
@@ -11619,11 +11626,6 @@ img {
   margin: 0 auto 0 auto;
 }
 
-h5, .h5 {
-  margin-top: 40px;
-  font-size: 1.1rem;
-}
-
 .mathjax {
   text-align: center;
   margin-bottom: 20px;
@@ -11636,4 +11638,28 @@ mjx-container.MathJax[jax=CHTML][display=true] {
 #probability {
   width: 100%;
   max-width: 600px;
+}
+
+.todo-box {
+  border: 1px dotted red;
+}
+
+.todo {
+  color: red;
+}
+
+.lesson-cover {
+  background: #FEF6DC;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  height: 300px;
+  border-radius: 3px;
+  font-size: 14px;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.16);
+  margin: 40px 0;
+}
+.lesson-cover img {
+  width: 70%;
 }

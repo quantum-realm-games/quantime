@@ -13,7 +13,7 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script src="js/scripts.js"></script>
-        <title>Quantime</title>
+        <title>Quantime - Lessons</title>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
@@ -26,49 +26,572 @@
                     </a>
                     <div class="navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mt-2 mt-lg-0">
-                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="lessons.html">Lessons</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="index.html">Lessons</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="puzzles.html">Puzzles</a></li>
                         </ul>
                     </div>
                 </nav>
-                <div class="container-sm">
-                    <h1 class="display-6 linear-wipe">Welcome to the Quantum Realm</h1>
-                    <p class="lead">
-                        The word
-                        <i>Quantum</i>
-                        might seem strange and scary, but it doesn't have to be. It's a label for the rules that describe all behavior in the universe, so far as humanity knows.
-                    </p>
-                    <p class="lead">Often, the conversation about quantum rules starts with a lot of imagination and mathematics. We're taking a different approach. The resources on this site can help you build an intuition about quantum principles by using simple games and puzzles that you can practice in the real world.</p>
-                    <a class="lead button-secondary" href="lessons.html">View lessons</a>
-                    <br />
-                    <a class="lead button-primary" href="puzzles.html">Play Quantum Chess puzzles</a>
-                </div>
-                <div class="container-sm" style="margin-top: 192px">
-                    <h3>About</h3>
-                    <p>
-                        The resources on this site are produced in a collaboration between Caltech, Google,
-                        <a href="https://quantumchess.net" target="_blank">Quantum Realm Games</a>
-                        , and many more people and academic partners. Our goal is to help the public develop an intuition about the principles of quantum physics.
-                    </p>
-                    <p>We believe that those principles are best introduced through play.</p>
-                    <p>
-                        We would love to hear your feedback, answer your questions, or work with you: get in touch with us by using
-                        <a href="#form" target="_blank">this form.</a>
-                    </p>
-                    <div class="logos">
-                        <a href="https://quantumchess.net/" target="_blank" alt="Quantum Realm Games"><img src="assets/logos/quantum-realm-games.png" alt="Quantum Realm Games logo" style="width: 360px" /></a>
-                        <a href="https://iqim.caltech.edu/" target="_blank" alt="CalTech, Institute for Quantum Information and Matter"><img src="assets/logos/iqim.png" alt="IQIM logo" style="width: 200px" /></a>
-                        <a href="https://quantumai.google/" target="_blank" alt="Google"><img src="assets/logos/google-quantum-ai.png" alt="Google Quantum AI logo" style="width: 200px" /></a>
-                        <a href="http://www.wiu.edu/physics" target="_blank" alt="Western Illinois University, Department of Physics"><img src="assets/logos/western-illinois-university.png" alt="Western Illinois University logo" style="width: 280px" /></a>
-                        <a href="https://arcanforge.com/" target="_blank" alt="Arcanforge"><img src="assets/logos/arcanforge.png" alt="Arcanforge logo" style="width: 240px" /></a>
+                <div class="d-flex" id="lessons-body">
+                    <div class="border-end bg-white" id="sidebar-wrapper">
+                        <div class="list-group list-group-flush">
+                            <a class="list-group-item header-2" href="#welcome">Welcome</a>
+                            <a class="list-group-item header-2" href="#lessons">Lessons</a>
+                            <a class="list-group-item header-3" href="#lessons_overview">Overview</a>
+                            <a class="list-group-item header-3" href="#lessons_learning-objectives">Learning objectives</a>
+                            <a class="list-group-item header-3" href="#lessons_standards-alignment">Standards alignment</a>
+                            <a class="list-group-item header-2" href="#quantum-chess">Lesson: Quantum Chess</a>
+                            <a class="list-group-item header-3" href="#quantum-chess_agenda">Agenda</a>
+                            <a class="list-group-item header-3" href="#quantum-chess_overview">Overview</a>
+                            <a class="list-group-item header-3" href="#quantum-chess_introduction">Introduction</a>
+                            <a class="list-group-item header-3" href="#quantum-chess_game-play">Game play</a>
+                            <a class="list-group-item header-3" href="#quantum-chess_strategy">Strategy reflection</a>
+                            <a class="list-group-item header-3" href="#quantum-chess_conclusion">Conclusion</a>
+                            <a class="list-group-item header-2" href="#zeros-and-ones">Lesson: Zeros and Ones (Quantum Magic Square)</a>
+                            <a class="list-group-item header-3" href="#zeros-and-ones_agenda">Agenda</a>
+                            <a class="list-group-item header-3" href="#zeros-and-ones_overview">Overview</a>
+                            <a class="list-group-item header-3" href="#zeros-and-ones_introduction">Introduction</a>
+                            <a class="list-group-item header-3" href="#zeros-and-ones_game-play">Game play</a>
+                            <a class="list-group-item header-3" href="#zeros-and-ones_strategy">Strategy reflection</a>
+                            <a class="list-group-item header-3" href="#zeros-and-ones_conclusion">Conclusion</a>
+                        </div>
                     </div>
-                    <p>
-                        For more activities and information about quantum physics, see
-                        <a href="https://q12education.org/quantime" target="_blank">the Quantime page at the Q12 Education Partnership website.</a>
-                    </p>
-                    <div class="logos">
-                        <a href="https://q12education.org/quantime" target="_blank" alt="Quantime"><img src="assets/logos/quantime.png" alt="Quantime logo" style="width: 240px" /></a>
+                    <div class="container-sm" id="lessons-container">
+                        <section id="welcome"></section>
+                        <div class="display-6 linear-wipe">Welcome to the Quantum Realm</div>
+                        <div class="todo-box">
+                            <div class="todo">Update this text to provide an introductory welcome to the site</div>
+                            <p class="lead">
+                                The word
+                                <i>Quantum</i>
+                                might seem strange and scary, but it doesn't have to be. It's a label for the rules that describe all behavior in the universe, so far as humanity knows.
+                            </p>
+                            <p class="lead">Often, the conversation about quantum rules starts with a lot of imagination and mathematics. We're taking a different approach. The resources on this site can help you build an intuition about quantum principles by using simple games and puzzles that you can practice in the real world.</p>
+                            <a class="lead button-secondary" href="#lessons">Teachers: View lessons (below)</a>
+                            <br />
+                            <a class="lead button-primary" href="puzzles.html">Students: Play Quantum Chess puzzles</a>
+                        </div>
+                        <section id="lessons">
+                            <h1>Lessons</h1>
+                            <p class="lead">The following lessons include resources for instructors from all backgrounds to introduce their students to quantum physics through game play. The activities are independent, so you can use either activity, or both, in any order. We recommend that you start with the Quantum Chess puzzles.</p>
+                        </section>
+                        <section id="lessons_overview">
+                            <h3>Overview</h3>
+                            <p>Students communicate that a quantum system can express the relationships between multiple configurations of classical, single-state systems (coins are either heads or tails, physical chess pieces are either on the board or not).</p>
+                            <p>This is a feature of the real world as well, hidden from us until recently. Researchers at labs around the world are now learning how to create and wield quantum phenomena at our everyday, macroscopic scales. This work is the foundation for a new kind of super-powerful computer, quantum computers.</p>
+                        </section>
+                        <div class="todo-box">
+                            <p class="todo">Todo: Merge these two sections into the lessons overview (see above, left nav)</p>
+                            <section id="lessons_quantum-chess" style="opacity: 0.3">
+                                <h3>Quantum Chess</h3>
+                                <div class="caption">This activity requires no prior knowledge of chess.</div>
+                                <p>
+                                    <a href="#quantum-chess">
+                                        Jump to the
+                                        <i>Quantum Chess</i>
+                                        activity.
+                                    </a>
+                                </p>
+                                <p>The Quantum Chess activity helps students build an intuition about quantum information science concepts. The chess board gives students a physical object that they can imagine while trying to understand states, probabilities, and interactions across states.</p>
+                                <p>Use this activity to ground your discussion about how information is encoded, stored, and transmitted in a quantum system.</p>
+                            </section>
+                            <section id="lessons_zeros-and-ones" style="opacity: 0.3">
+                                <h3>Zeros and Ones (Quantum Magic Square)</h3>
+                                <p>
+                                    <a href="#zeros-and-ones">
+                                        Jump to the
+                                        <i>Zeros and Ones</i>
+                                        activity
+                                    </a>
+                                </p>
+                                <p>The Zeros and Ones activity is a social, collaborative game where the students work together to overcome the mathematical odds. This activity emphasizes the limitations of classical physics of systems: an optimal strategy only enables a win ratio of 8/9. However, if the students have access to a quantum computer, the win ratio grows to 100%.</p>
+                                <p>Use this activity to motivate your discussion about how quantum systems enable new ways to transmit and capture information.</p>
+                            </section>
+                        </div>
+                        <section id="lessons_learning-objectives">
+                            <h3>Learning objectives</h3>
+                            <p>Students communicate that a quantum system can express the relationships between multiple configurations of classical, single-state systems (coins are either heads or tails, physical chess pieces are either on the board or not).</p>
+                            <p>This is a feature of the real world as well, hidden from us until recently. Researchers at labs around the world are now learning how to create and wield quantum phenomena at our everyday, macroscopic scales. This work is the foundation for a new kind of super-powerful computer, quantum computers.</p>
+                        </section>
+                        <section id="lessons_standards-alignment">
+                            <h3>Standards alignment</h3>
+                            <p>
+                                For teachers in the United States, you should find that these lessons align with the
+                                <a href="https://www.nextgenscience.org/" target="_blank">Next Generation Science Standards</a>
+                                :
+                            </p>
+                            <div class="lesson-script">
+                                <ul>
+                                    <li>
+                                        MS-PS4-3:
+                                        <a href="https://www.nextgenscience.org/pe/ms-ps4-3-waves-and-their-applications-technologies-information-transfer" target="_blank">Integrate qualitative scientific and technical information to support the claim that digitized signals are a more reliable way to encode and transmit information than analog signals.</a>
+                                    </li>
+                                    <li>
+                                        HS-PS4-2:
+                                        <a href="https://www.nextgenscience.org/pe/hs-ps4-2-waves-and-their-applications-technologies-information-transfer" target="_blank">Evaluate questions about the advantages of using digital transmission and storage of information.</a>
+                                    </li>
+                                    <li>
+                                        HS-PS4-5:
+                                        <a href="https://www.nextgenscience.org/pe/hs-ps4-5-waves-and-their-applications-technologies-information-transfer" target="_blank">Communicate technical information about how some technological devices use the principles of wave behavior and wave interactions with matter to transmit and capture information and energy.</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>Both lessons aim to help students build an intuition about using quantum systems to reason about the encoding and transmission of digital information.</p>
+                        </section>
+                        <section id="quantum-chess">
+                            <h2>Lesson: Quantum Chess</h2>
+                            <div class="lesson-cover">
+                                <div><img src="assets/logos/quantum-chess.webp" alt="Quantum Chess logo" /></div>
+                            </div>
+                            <div class="todo-box">
+                                <div class="todo">Todo: Revise content</div>
+                                <p class="lead">Quantum Chess offers students a chance to understand the limitations of classical physics, and improve their chances at winning a game by using Quantum Information Science as an analytic tool. This activity highlights the limitations of classical systems analysis.</p>
+                                <p>Run this activity</p>
+                                <ul>
+                                    <li><a href="puzzles.html">Go to the guided Quantum Chess puzzles</a></li>
+                                    <li><a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit?usp=sharing" target="_quantumChessSlides">Present the slides</a></li>
+                                    <li>
+                                        Choose a
+                                        <a href="#quantum-chess_conclusion">conclusion</a>
+                                        (below).
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="todo-box" id="quantum-chess_agenda">
+                            <h3>Agenda</h3>
+                            <div class="todo">Todo: Revise content</div>
+                            <ol id="agenda-list">
+                                <li>
+                                    <b>Introduction:</b>
+                                    (5 mins) - See language provided on our Quantime website.
+                                </li>
+                                <li>
+                                    <b>Play the game:</b>
+                                    (25 min) - An engaging full-class activity that builds excitement around quantum and fosters collaboration among students.
+                                </li>
+                                <li>
+                                    <b>Strategy:</b>
+                                    (5-10 min) - Students explore the best classical strategy to win the game.
+                                </li>
+                                <li class="todo">
+                                    <b>Quantum connection:</b>
+                                    (10-15 min) - Todo: Add content
+                                </li>
+                            </ol>
+                            <table class="table" id="agenda-table">
+                                <tbody>
+                                    <tr>
+                                        <th>Section</th>
+                                        <th>Time (minutes)</th>
+                                        <th>Description</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Introduction</td>
+                                        <td>5m</td>
+                                        <td>
+                                            This activity demonstrates the power of two important concepts in Quantum physics:
+                                            <b>quantum superposition</b>
+                                            and
+                                            <b>quantum entanglement</b>
+                                            . These two concepts are be responsible for everything we see in the Quantum Realm.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gameplay</td>
+                                        <td>25m</td>
+                                        <td>An engaging full-class activity that builds excitement around quantum and fosters collaboration among students.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Strategy reflection</td>
+                                        <td>5-10m</td>
+                                        <td>Students explore the best classical strategy to win the game. They learn that winning the game becomes exponentially harder with each additional round.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Conclusion</td>
+                                        <td>10-15m</td>
+                                        <td class="todo">
+                                            <b>Quantum connection:</b>
+                                            (10-15 min) - Todo: Add content
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section id="quantum-chess_overview">
+                            <h3>Overview for the instructor</h3>
+                            <div class="todo-box">
+                                <div class="todo">Todo: Create overview content</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id condimentum nunc. Cras non commodo ligula, nec congue ante. Duis bibendum rutrum ultrices. Sed vel augue mollis, posuere est nec, sagittis orci. Nullam iaculis diam nunc, sit amet varius tortor auctor vel. Cras sodales dui quis consectetur luctus. Duis nec dui nulla. Mauris finibus vehicula sapien in accumsan. Donec congue elit leo, ac aliquam metus elementum vel.</p>
+                            </div>
+                        </section>
+                        <section class="todo-box" id="quantum-chess_introduction">
+                            <h3>Introduction</h3>
+                            <div class="todo">Todo: Revise content</div>
+                            <h4>General introduction to Quantum Physics</h4>
+                            <p>You can use this script before the first lesson:</p>
+                            <div class="lesson-script">
+                                <p>"Today we are going to explore an exciting branch of physics called Quantum physics. Quantum physics usually deals with things that are very very small, like particles and atoms. This level is called the Quantum Realm. Things are different down at that level. One amazing aspect of the Quantum Realm is that it predicts the existence of many parallel universes, where things can be very different from our universe. For example, there may be a universe in which dinosaurs still roam the Earth, or even ones in which time travel and teleportation have already been developed."</p>
+                                <p>"The idea that we may be living in just one of many universes - a multiverse - may sound unbelievable, like something out of science fiction. Still, it’s something that many quantum physicists believe to be true, and are currently researching."</p>
+                                <p>"If you’ve heard of the Marvel superhero Ant Man, then you’ve already been introduced to the Quantum Realm! Ant Man wears a special suit that allows him to enter the Quantum Realm and harness its power. Indeed, current research has revealed deep connections between fundamental aspects of the Quantum Realm and the nature of space and time."</p>
+                                <p>"In fact, scientists at universities like Caltech and companies like Google, are looking for ways to manifest the powers of the Quantum Realm at the human scale. This would open a world of possibilities for the future of science and humanity, and we’re going to learn more about it today!""</p>
+                            </div>
+                            <h4>Introduction to Quantum Chess</h4>
+                            <p>You can use the following script to introduce your class to Quantum Chess puzzles. The in-puzzle character will do the rest.</p>
+                            <div class="lesson-script">
+                                <p>"Raise your hand if you have played chess before or seen Queen’s Gambit?"</p>
+                                <p>"Today, our friends at Caltech, Google, and Quantum Realm Games are going to teach us how to play a version of chess with a Quantum twist! Through the game we will learn more about how things work at the Quantum Realm."</p>
+                                <p>
+                                    "We'll learn about a concept called
+                                    <b>quantum superposition</b>
+                                    , which is when something can exist in multiple states at the same time."
+                                </p>
+                                <p>
+                                    "We will also learn about another amazing power hiding within the quantum realm:
+                                    <b>quantum entanglement</b>
+                                    . Quantum entanglement is so powerful, it is thought to connect all of space and time, including how the multiverse itself may be stitched together."
+                                </p>
+                                <p>"When you go to this link on your device, you will be directed through a series of puzzles. These puzzles apply the laws of quantum physics to the classic game of chess. You don’t need to know how to play chess to enjoy the game."</p>
+                            </div>
+                        </section>
+                        <section class="todo-box" id="quantum-chess_game-play">
+                            <h3>Game play</h3>
+                            <div class="todo">Todo: Add content</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id condimentum nunc. Cras non commodo ligula, nec congue ante. Duis bibendum rutrum ultrices. Sed vel augue mollis, posuere est nec, sagittis orci. Nullam iaculis diam nunc, sit amet varius tortor auctor vel. Cras sodales dui quis consectetur luctus. Duis nec dui nulla. Mauris finibus vehicula sapien in accumsan. Donec congue elit leo, ac aliquam metus elementum vel.</p>
+                        </section>
+                        <section class="todo-box" id="quantum-chess_strategy">
+                            <h3>Strategy reflection</h3>
+                            <div class="todo">Todo: Add content</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id condimentum nunc. Cras non commodo ligula, nec congue ante. Duis bibendum rutrum ultrices. Sed vel augue mollis, posuere est nec, sagittis orci. Nullam iaculis diam nunc, sit amet varius tortor auctor vel. Cras sodales dui quis consectetur luctus. Duis nec dui nulla. Mauris finibus vehicula sapien in accumsan. Donec congue elit leo, ac aliquam metus elementum vel.</p>
+                        </section>
+                        <section class="todo-box" id="quantum-chess_conclusion">
+                            <h3>Conclusion</h3>
+                            <div class="todo">Todo: Review content (copied from Zeros & Ones conclusion)</div>
+                            <p>Below are some suggested resources that you can use to close your lesson:</p>
+                            <h5><a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit#slide=id.g122f15d85e6_2_11" target="_quantumChessSlides">Practical applications</a></h5>
+                            <p>This outro is about connecting the quantum concepts the students learned about to the real world. Before leading this workshop, feel free to watch all of the videos and decide which would be most appropriate for your class, or ask the class to choose! We love them all so we couldn’t choose just one!</p>
+                            <div class="lesson-script">"Today, we’ve been introduced to quantum superposition and how we can leverage it to win games, but quantum computing isn’t all about winning games. We’re going to wrap up today by watching a video that will help us understand how we can use quantum computing to solve some of the big challenges in the world."</div>
+                            <ul>
+                                <li><a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit#slide=id.g122f15d85e6_2_16" target="_quantumChessSlides">What if we had working quantum computers today? (5:03)</a></li>
+                                <li><a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit#slide=id.g122f15d85e6_2_23" target="_quantumChessSlides">Quantum Computers Explained - Limits of Human Technology (6:45, can start at 3:45 if too long)</a></li>
+                                <li><a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit#slide=id.g122f15d85e6_2_30" target="_quantumChessSlides">How Quantum Computing Will Change the World (3:37)</a></li>
+                            </ul>
+                            <h5><a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit#slide=id.g122f15d85e6_2_37" target="_quantumChessSlides">Quantum in Hollywood</a></h5>
+                            <p>This video pits actor Paul Rudd (Marvel’s Ant Man) against theoretical physicist Stephen Hawking playing each other in an epic game of quantum chess.</p>
+                            <p>This video can be watched after either lesson but we recommend showing it after the students have been introduced to the chess puzzles. It’s a bit long but serves as a fun note to end on. If there is not enough time, we recommend sending the link home with your students so they can watch it on their own time!</p>
+                            <p>If the students are not familiar with Ant Man, explain that he is a Marvel superhero that has a special suit that makes him extremely tiny, allowing him to enter a tiny universe called the Quantum Realm. If the students are not familiar with Stephen Hawking, explain that he is a famous theoretical physicist, who tried to figure out the Theory of Everything - how gravity works at the quantum level.</p>
+                            <ul>
+                                <li>
+                                    <a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit#slide=id.g122f15d85e6_2_42" target="_blank">Stephen Hawking faces Paul Rudd in epic chess match (feat. Keanu Reeves)</a>
+                                    (11:50)
+                                </li>
+                            </ul>
+                            <h5><a href="https://docs.google.com/presentation/d/1rOxF-8DQN6EKvmh3s1JEWUaOdAXam8GIms4ZrCFAriE/edit#slide=id.g121478fb216_0_1" target="_quantumChessSlides">Find out more</a></h5>
+                            <p>Our classroom time with quantum physics is coming to an end but hopefully this was an exciting introduction to the quantum world.</p>
+                            <p>There is so much more to learn about this topic that we weren’t able to cover in this lesson. The study of quantum physics is vast and ever-growing, and if you’d like to continue your journey with it, there are many ways:</p>
+                            <ul>
+                                <li>
+                                    Explore the
+                                    <a href="https://quantumchess.net/playground" target="_blank">Quantum Chess playground</a>
+                                </li>
+                                <li>
+                                    Learn More about Quantum Science:
+                                    <ul>
+                                        <li><a href="https://scienceexchange.caltech.edu/topics/quantum-science-explained" target="_blank">Caltech Quantum Physics explainers</a></li>
+                                        <li><a href="https://q12education.org/quantime" target="_blank">Other Quantime activities at the Q12 Partnership</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    Play more quantum chess (either
+                                    <a href="https://quantumchess.net/" target="_blank">website</a>
+                                    or give access to quantum realm version)
+                                </li>
+                                <li>
+                                    On the same
+                                    <a href="https://iqim.caltech.edu/quantime/" target="_blank">website that we used to play the quantum chess puzzles</a>
+                                    , you can find more resources to learn about quantum science.
+                                </li>
+                            </ul>
+                        </section>
+                        <section id="zeros-and-ones">
+                            <h2>
+                                Lesson: Zeros and Ones
+                                <br />
+                                (Quantum Magic Square)
+                            </h2>
+                            <div class="lesson-cover">
+                                <div><img src="assets/logos/zeros-and-ones.png" alt="Zeros and Ones logo" /></div>
+                            </div>
+                            <p class="lead">Zeros and Ones (a quantum Magic Square game) offers students a chance to understand the limitations of classical physics, and improve their chances at winning a game by using Quantum Information Science as an analytic tool. This activity highlights the limitations of classical systems analysis.</p>
+                            <p>Run this activity</p>
+                            <ul>
+                                <li>
+                                    Before class: print
+                                    <a href="https://drive.google.com/file/d/19n8KYIzd4Hq--w6duAGOPM42veEJSx5Y/view" target="_blank">game sheets.</a>
+                                </li>
+                                <li>
+                                    Project the
+                                    <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.p" target="_zerosAndOnesSlides">presentation slides.</a>
+                                </li>
+                                <li>
+                                    Play the
+                                    <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_169" target="_onesAndZerosSlides">pre-recorded facilitator (slide 3).</a>
+                                </li>
+                                <li>
+                                    Choose a
+                                    <a href="#zeros-and-ones_conclusion">conclusion</a>
+                                    (below).
+                                </li>
+                            </ul>
+                        </section>
+                        <section id="zeros-and-ones_agenda">
+                            <h3>Agenda</h3>
+                            <ol id="agenda-list">
+                                <li>
+                                    <b>Introduction:</b>
+                                    (5 mins) - See language provided on our Quantime website.
+                                </li>
+                                <li>
+                                    <b>Play the game:</b>
+                                    (25 min) - An engaging full-class activity that builds excitement around quantum and fosters collaboration among students.
+                                </li>
+                                <li>
+                                    <b>Strategy:</b>
+                                    (5-10 min) - Students explore the best classical strategy to win the game. They learn that winning the game becomes exponentially harder with each additional round.
+                                </li>
+                                <li>
+                                    <b>Quantum connection:</b>
+                                    (10-15 min) - Students 1.) revisit the Zeros and Ones game through an animation that recasts the game’s strategy in a quantum light, and 2.) a video presenting some of the amazing, real world applications of quantum computers.
+                                </li>
+                            </ol>
+                            <table class="table" id="agenda-table">
+                                <tbody>
+                                    <tr>
+                                        <th>Section</th>
+                                        <th>Time (minutes)</th>
+                                        <th>Description</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Introduction</td>
+                                        <td>5m</td>
+                                        <td>
+                                            This activity demonstrates the power of two important concepts in Quantum physics:
+                                            <b>quantum superposition</b>
+                                            and
+                                            <b>quantum entanglement</b>
+                                            . These two concepts are be responsible for everything we see in the Quantum Realm.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gameplay</td>
+                                        <td>25m</td>
+                                        <td>An engaging full-class activity that builds excitement around quantum and fosters collaboration among students.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Strategy reflection</td>
+                                        <td>5-10m</td>
+                                        <td>Students explore the best classical strategy to win the game. They learn that winning the game becomes exponentially harder with each additional round.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Conclusion</td>
+                                        <td>10-15m</td>
+                                        <td>Students 1.) revisit the Zeros and Ones game through an animation that recasts the game&rsquo;s strategy in a quantum light, and 2.) a video presenting some of the amazing, real world applications of quantum computers.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section id="zeros-and-ones_overview">
+                            <h3>Overview for the instructor</h3>
+                            <p>In a standard Magic Square game, a player is given 9 numbers and a 3 by 3 grid. The task is to fill in the grid with the numbers so that all rows, columns, and diagonals sum to a single number. Solutions exist to solve the Magic Square.</p>
+                            <img src="assets/lessons/classical-magic-square.svg" alt="9 numbers and a 3 by 3 grid" />
+                            <p>In the Quantum Magic Square game, the goal is for two groups to coordinate the placement of the numbers 1 and 0 in their column and row, in a pattern so that both groups choose the same number where the one's row and the other's column intersect.</p>
+                            <p>The Blue group must populate the rows of the grid with an even number of ones. The Red group must populate the columns with an odd number of Zeros.</p>
+                            <div id="strategy-table-wrapper">
+                                <table class="table" id="ones-and-zeros-overview-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="assets/lessons/row-strategy.svg" alt="Row strategy" />
+                                                <div class="caption">Three rows that meet the requirements for Zeros and Ones: 011, 110, 101.</div>
+                                            </td>
+                                            <td>
+                                                <img src="assets/lessons/column-strategy.svg" alt="Column strategy" />
+                                                <div class="caption">Three columns that meet the requirements for Zeros and Ones: 010, 100, 111.</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <img src="assets/lessons/dice.png" alt="Dice" />
+                                                <div class="caption">A pair of rolling dice</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="assets/lessons/winning-condition.svg" alt="Winning condition: row 2, column 1" />
+                                                <div class="caption">A winning play for the team, where the second row and first column were assigned. The Blue group chose 110, and the Red group chose 010. The row and column both have the number 1 at the intersection</div>
+                                            </td>
+                                            <td>
+                                                <img src="assets/lessons/losing-condition.svg" alt="Losing condition row 2, column 2" />
+                                                <div class="caption">A losing play for the team, where the second row and second column were assigned. The Blue group chose 110 and the Red group chose 100. The row and column have different numbers at the intersection.</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>The dice introduce an element of chance that makes the Zeros and Ones game unwinnable if the game is played repeatedly.</p>
+                            <p>However, if the students had access to a quantum system (like a quantum computer, or some other kind of "entangled qubit"), the quantum magic square game is winnable every time.</p>
+                            <p>
+                                In this game, the class divides into four teams, each with two groups. A
+                                <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_169" target="_onesAndZerosSlides">pre-recorded facilitator</a>
+                                guides the entire class through the process.
+                            </p>
+                        </section>
+                        <section id="zeros-and-ones_introduction">
+                            <h3>Introduction</h3>
+                            <p>If this is their first lesson, you can say:</p>
+                            <div class="lesson-script">
+                                <p>
+                                    "Today our goal is to understand the power of two important concepts in Quantum physics:
+                                    <b>quantum superposition</b>
+                                    and
+                                    <b>quantum entanglement</b>
+                                    . These two concepts are be responsible we see in the Quantum Realm. We’re going to start by playing a game together. It’s a fairly simple game called Zeroes and Ones. I’m going to play a video so all you need to do is follow along.""
+                                </p>
+                            </div>
+                            <p>If they’ve already done the chess puzzles lesson, you can say:</p>
+                            <div class="lesson-script">
+                                <p>
+                                    "In the previous lesson, you learned about
+                                    <b>quantum superposition</b>
+                                    and
+                                    <b>quantum entanglement</b>
+                                    through the game of quantum chess. Remember: quantum superposition is when something can exist in multiple states at the same time. Today we are going to continue to see the power of superposition and entanglement through another game that we’re all going to play together.""
+                                </p>
+                            </div>
+                        </section>
+                        <section id="zeros-and-ones_game-play">
+                            <h3>Game play</h3>
+                            <p>
+                                Before you begin: Print at least one set of
+                                <a href="https://drive.google.com/file/d/19n8KYIzd4Hq--w6duAGOPM42veEJSx5Y/view" target="_blank">game play sheets</a>
+                                for each team.
+                            </p>
+                            <p>
+                                The
+                                <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_169" target="_onesAndZerosSlides">pre-recorded facilitator</a>
+                                leads the class through the following steps:
+                            </p>
+                            <ul class="checklist">
+                                <li>
+                                    <input id="cb1" type="checkbox" />
+                                    <label for="cb1">Divide students into 4 groups, based on their location in the classroom.</label>
+                                </li>
+                                <li>
+                                    <input id="cb2" type="checkbox" />
+                                    <label for="cb2">Choose a referee for each group (4 referees in total).</label>
+                                </li>
+                                <li>
+                                    <input id="cb3" type="checkbox" />
+                                    <label for="cb3">Subdivide each group into two sides: Blue and Red.</label>
+                                </li>
+                                <li>
+                                    <input id="cb4" type="checkbox" />
+                                    <label for="cb4">
+                                        The
+                                        <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_169" target="_onesAndZerosSlides">pre-recorded facilitator</a>
+                                        explains the specifics of the game Zeros and Ones.
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="cb5" type="checkbox" />
+                                    <label for="cb5">After a demo round, each group has 3 minutes to strategize before the first round of play. If Red and Blue try to coordinate answers during the game, the group loses that round and is eliminated.</label>
+                                </li>
+                                <li>
+                                    <input id="cb6" type="checkbox" />
+                                    <label for="cb6">If two or more groups are eliminated during play, the game ends and the teacher wins.</label>
+                                </li>
+                                <li>
+                                    <input id="cb7" type="checkbox" />
+                                    <label for="cb7">If 3 or more groups remain after 4 rounds, the teacher declares the class the winner.</label>
+                                </li>
+                            </ul>
+                        </section>
+                        <section id="zeros-and-ones_strategy">
+                            <h3>Strategy reflection</h3>
+                            <p>Jump to the:</p>
+                            <ul>
+                                <li><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_173" target="_zerosAndOnesSlides">Strategy Discussion slides</a></li>
+                                <li><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_215" target="_blank">Strategy video</a></li>
+                            </ul>
+                            <p>To win the game, every row needs an even number of 1s and every column needs an odd number of 1s. However, there's always one square that can't be filled in without breaking the rules. This means that there is only an 8/9 chance of winning any given round, or about 89%.</p>
+                            <img alt="Ideal strategy" src="assets/lessons/ideal-strategy.svg" style="width: 260px" />
+                            <p>We can write the probability for any one team winning four rounds in a row:</p>
+                            <div class="mathjax">$$p = \left( \frac{8}{9} \right)^4 \approx 62.43\%$$</div>
+                            <p>Or, more generally, for winning n games in a row:</p>
+                            <div class="mathjax">$$p = \left( \frac{8}{9} \right)^n$$</div>
+                            <p>Now we can write the probability of at least three groups winning all four rounds:</p>
+                            <img id="probability" alt="Equation" src="assets/lessons/probability.svg" alt="p to the power of 4 plus 4 left parenthesis 1 minus p right parenthesis p cubed space equals p to the power of 4 plus 4 p cubed minus 4 p to the power of 4 space equals 4 p cubed minus 3 p to the power of 4" />
+                            <p>Earlier, we calculated that the probability of winning all four rounds was $$\left( \frac{8}{9} \right)^4$$, so substituting that into our equation:</p>
+                            <div class="mathjax">$$4 \left( \frac{8}{9} \right)^{4 \times 3} - 3 \left( \frac{8}{9} \right)^{4 \times 4}$$</div>
+                            <div class="mathjax">$$\approx 51.76\%$$</div>
+                            <p>As we build machines that enable us to engage with the quantum realm, like quantum computers, we can play this game in a way where we win 100% of the time. For this game, we need a device with six qubits that we can entangle.</p>
+                            <p>
+                                <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_220" target="onesAndZerosSlides">This video</a>
+                                following video describes how we can use these qubits to win the game.
+                            </p>
+                        </section>
+                        <section id="zeros-and-ones_conclusion">
+                            <h3>Conclusion</h3>
+                            <p>Below are some suggested resources that you can use to close your lesson:</p>
+                            <h5><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_223" target="_zerosAndOnesSlides">Practical applications</a></h5>
+                            <p>This outro is about connecting the quantum concepts the students learned about to the real world. Before leading this workshop, feel free to watch all of the videos and decide which would be most appropriate for your class, or ask the class to choose! We love them all so we couldn’t choose just one!</p>
+                            <div class="lesson-script">"Today, we’ve been introduced to quantum superposition and how we can leverage it to win games, but quantum computing isn’t all about winning games. We’re going to wrap up today by watching a video that will help us understand how we can use quantum computing to solve some of the big challenges in the world."</div>
+                            <ul>
+                                <li><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_228" target="_zerosAndOnesSlides">What if we had working quantum computers today? (5:03)</a></li>
+                                <li><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_235" target="_zerosAndOnesSlides">Quantum Computers Explained - Limits of Human Technology (6:45, can start at 3:45 if too long)</a></li>
+                                <li><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_242" target="_zerosAndOnesSlides">How Quantum Computing Will Change the World (3:37)</a></li>
+                            </ul>
+                            <h5><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_249" target="_zerosAndOnesSlides">Quantum in Hollywood</a></h5>
+                            <p>This video pits actor Paul Rudd (Marvel’s Ant Man) against theoretical physicist Stephen Hawking playing each other in an epic game of quantum chess.</p>
+                            <p>This video can be watched after either lesson but we recommend showing it after the students have been introduced to the chess puzzles. It’s a bit long but serves as a fun note to end on. If there is not enough time, we recommend sending the link home with your students so they can watch it on their own time!</p>
+                            <p>If the students are not familiar with Ant Man, explain that he is a Marvel superhero that has a special suit that makes him extremely tiny, allowing him to enter a tiny universe called the Quantum Realm. If the students are not familiar with Stephen Hawking, explain that he is a famous theoretical physicist, who tried to figure out the Theory of Everything - how gravity works at the quantum level.</p>
+                            <ul>
+                                <li>
+                                    <a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_254" target="_blank">Stephen Hawking faces Paul Rudd in epic chess match (feat. Keanu Reeves)</a>
+                                    (11:50)
+                                </li>
+                            </ul>
+                            <h5><a href="https://docs.google.com/presentation/d/1OWCkSIbSvnFFQBjHnmUf_OJ88-UyPEThyoBO37dpgQA/edit#slide=id.g122ec1bc703_2_261" target="_zerosAndOnesSlides">Find out more</a></h5>
+                            <p>Our classroom time with quantum physics is coming to an end but hopefully this was an exciting introduction to the quantum world.</p>
+                            <p>There is so much more to learn about this topic that we weren’t able to cover in this lesson. The study of quantum physics is vast and ever-growing, and if you’d like to continue your journey with it, there are many ways:</p>
+                            <ul>
+                                <li>
+                                    Explore the
+                                    <a href="https://quantumchess.net/playground" target="_blank">Quantum Chess playground</a>
+                                </li>
+                                <li>
+                                    Learn More about Quantum Science:
+                                    <ul>
+                                        <li><a href="https://scienceexchange.caltech.edu/topics/quantum-science-explained" target="_blank">Caltech Quantum Physics explainers</a></li>
+                                        <li><a href="https://q12education.org/quantime" target="_blank">Other Quantime activities at the Q12 Partnership</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    Play more quantum chess (either
+                                    <a href="https://quantumchess.net/" target="_blank">website</a>
+                                    or give access to quantum realm version)
+                                </li>
+                                <li>
+                                    On the same
+                                    <a href="https://iqim.caltech.edu/quantime/" target="_blank">website that we used to play the quantum chess puzzles</a>
+                                    , you can find more resources to learn about quantum science.
+                                </li>
+                            </ul>
+                        </section>
                     </div>
                 </div>
             </div>

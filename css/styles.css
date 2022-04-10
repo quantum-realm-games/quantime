@@ -4033,8 +4033,8 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1.0rem;
+  padding-bottom: 1.0rem;
 }
 .navbar > .container,
 .navbar > .container-fluid,

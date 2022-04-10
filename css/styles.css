@@ -4033,8 +4033,8 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -11311,7 +11311,7 @@ textarea.form-control-lg {
 
 #sidebar-wrapper .list-group {
   width: 13rem;
-  margin-top: 60px;
+  margin-top: 120px;
 }
 
 #page-content-wrapper {
@@ -11431,13 +11431,13 @@ a:hover {
 }
 
 h1, .h1, .display-6 {
-  padding-top: 140px;
+  padding-top: 100px;
   padding-bottom: 40px;
   color: #1C7DE1;
 }
 
 h2, .h2 {
-  padding-top: 140px;
+  padding-top: 100px;
 }
 
 h3, .h3 {
@@ -11663,3 +11663,4 @@ mjx-container.MathJax[jax=CHTML][display=true] {
 .lesson-cover img {
   width: 70%;
 }
+

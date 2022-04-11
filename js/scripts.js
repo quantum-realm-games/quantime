@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', event => {
     scrollEl.addEventListener('scroll', onScroll);
     const body = window.document.body;
     lessonSections = Array.from(body.querySelectorAll('section'));
-    lessonSections.unshift(body.querySelector('#lessons'));
+    // lessonSections.unshift(body.querySelector('#lessons'));
     sideNavItems = Array.from(body.querySelectorAll('.list-group-item'));
     window.requestAnimationFrame(onScroll);
 });
@@ -42,3 +42,4 @@ function onScroll($event) {
     // } else {
     //     console.log('no item active');
     // }
+}

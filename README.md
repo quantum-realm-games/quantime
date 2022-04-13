@@ -10,7 +10,7 @@ Based on [Simple Sidebar template](https://startbootstrap.com/template/simple-si
 - Clone this repository to your local development environment `git pull https://github.com/quantum-realm-games/quantime.git`
 - Open index.html in Chrome
 - If editing the nav bar, remember to update each page.
-- Commited changes will be immediately available at [https://quantum-realm-games.github.io/quantime/dist/](https://quantum-realm-games.github.io/quantime/dist/)
+- Commited changes will be immediately available at [https://quantum-realm-games.github.io/quantime](https://quantum-realm-games.github.io/quantime)
 - Published to [https://iqim.caltech.edu/quantime](https://iqim.caltech.edu/quantime)
 
 <!-- ### Development setup (Obsolete)
